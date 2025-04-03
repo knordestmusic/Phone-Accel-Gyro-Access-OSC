@@ -15,7 +15,7 @@ A web application that captures accelerometer and gyroscope data from a mobile d
 ## Prerequisites
 
 - [Node.js](https://nodejs.org/) (v12 or higher)
-- [Max MSP](https://cycling74.com/products/max)
+- [Max MSP](https://cycling74.com/products/max) but works in anything since it's all over a UDP port.
 - A mobile device with accelerometer and gyroscope sensors
 - Computer and mobile device on the same network
 
