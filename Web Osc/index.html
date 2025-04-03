@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Accelerometer to Max MSP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .data-display {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .value {
+            font-weight: bold;
+        }
+        button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 16px;
+            margin: 10px 0;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        input {
+            padding: 8px;
+            margin: 5px 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .status {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .connected {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .disconnected {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Phone Accelerometer to Max MSP</h1>
+        
+        <div class="connection-setup">
+            <h2>Connection Settings</h2>
+            <div>
+                <label for="ip-address">Max MSP IP Address:</label>
+                <input type="text" id="ip-address" value="127.0.0.1" placeholder="e.g., 192.168.1.100">
+            </div>
+            <div>
+                <label for="port">Port:</label>
+                <input type="number" id="port" value="8000" placeholder="e.g., 8000">
+            </div>
+            <button id="connect-btn">Connect</button>
+            <div id="connection-status" class="status disconnected">Disconnected</div>
+        </div>
+        
+        <div class="sensor-control">
+            <h2>Sensor Data</h2>
+            <button id="start-btn">Start Capturing</button>
+            <button id="stop-btn" disabled>Stop Capturing</button>
+            
+            <div class="data-display">
+                <h3>Accelerometer (m/s²)</h3>
+                <div>X: <span id="accel-x" class="value">0.00</span></div>
+                <div>Y: <span id="accel-y" class="value">0.00</span></div>
+                <div>Z: <span id="accel-z" class="value">0.00</span></div>
+            </div>
+            
+            <div class="data-display">
+                <h3>Gyroscope (rad/s)</h3>
+                <div>Alpha: <span id="gyro-alpha" class="value">0.00</span></div>
+                <div>Beta: <span id="gyro-beta" class="value">0.00</span></div>
+                <div>Gamma: <span id="gyro-gamma" class="value">0.00</span></div>
+            </div>
+            
+            <div class="settings">
+                <h3>Settings</h3>
+                <div>
+                    <label for="update-rate">Update Rate (ms):</label>
+                    <input type="number" id="update-rate" value="100" min="10" max="1000">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
