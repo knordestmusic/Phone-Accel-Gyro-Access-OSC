@@ -60,6 +60,3 @@ A web application that captures accelerometer and gyroscope data from a mobile d
 3. Add [OSC-route /accelerometer /gyroscope] to separate the data streams
 4. For each data stream, add [unpack f f f] to extract the X, Y, Z values
    
-
-
-* 
