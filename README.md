@@ -62,4 +62,4 @@ A web application that captures accelerometer and gyroscope data from a mobile d
    
 
 
-
+* 
